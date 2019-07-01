@@ -78,7 +78,6 @@ export default class PhoneNumberGeneratorController {
         } else {
           generatedPhoneNumbers.sort().reverse();
         }
-        console.log(generatedPhoneNumbers);
 
         if (!fs.existsSync(FILE_PATH)){
             fs.mkdirSync(FILE_PATH);
@@ -93,7 +92,6 @@ export default class PhoneNumberGeneratorController {
         });
 
       } catch (error) {
-        console.log(error);
         CustomError.handleError(error, 500, res);
       }
     }
